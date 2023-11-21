@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000; /* TikTok background color */
+    font-family: Arial, sans-serif; /* TikTok uses a custom font, Arial is a close match */
+    color: #fff; /* Default text color */
+}
+
+.tiktok-wrapper {
+    max-width: 500px; /* TikTok video width */
+    margin: auto;
+    position: relative;
+    background-color: #000;
+}
+
+.video-container video {
+    width: 100%;
+    display: block; /* Remove any default margin or padding */
+}
+
+.right-sidebar {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%; /* Center on the right side */
+    transform: translateY(-50%); /* Align center with the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: transparent; /* Adjust if you want a background color */
+    display: block; /* Ensures the img tag behaves as a block-level element */
+}
+
+.bottom-section {
+    padding: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444; /* Separator */
+}
+
+.profile-icon {
+    width: 40px; /* Size of profile icon */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.follow-button {
+    background-color: #fe2c55; /* TikTok's follow button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin-left: auto; /* Push the button to the right */
+    cursor: pointer;
+}
+
+.video-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.music-note {
+    margin-right: 5px;
+}
+
+.music-name {
+    overflow: hidden; /* In case the text is too long */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
