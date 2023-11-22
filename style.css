@@ -54,7 +54,7 @@ body, html {
 }
 
 .username {
-    font-weight: bold;
+    font-weight: bold; /* Making the username bold */
     display: inline-flex;
     align-items: center; /* Align text and verified icon vertically */
 }
@@ -78,6 +78,10 @@ body, html {
 .video-description {
     margin-top: 5px; /* Spacing from the user info section */
     font-size: 0.9em; /* Smaller font size for description */
+}
+
+.hashtag {
+    font-weight: bold; /* Make hashtags bold */
 }
 
 .music-info {
