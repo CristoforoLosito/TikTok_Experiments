@@ -3,12 +3,12 @@ body, html {
     padding: 0;
     height: 100%;
     background-color: #000; /* TikTok background color */
-    font-family: Arial, sans-serif; /* TikTok uses a custom font, Arial is a close match */
-    color: #fff; /* Default text color */
+    font-family: Arial, sans-serif; /* Similar to TikTok's font */
+    color: #fff; /* Text color */
 }
 
 .tiktok-wrapper {
-    max-width: 500px; /* TikTok video width */
+    max-width: 500px; /* Similar to TikTok's video width */
     margin: auto;
     position: relative;
     background-color: #000;
@@ -21,20 +21,19 @@ body, html {
 
 .right-sidebar {
     position: absolute;
-    right: 10px; /* Adjust as needed */
-    top: 50%; /* Center on the right side */
-    transform: translateY(-50%); /* Align center with the video */
+    right: 10px; /* Spacing from the right edge */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Offset for vertical centering */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .icon {
-    width: 40px;
+    width: 40px; /* Size for icons */
     height: 40px;
-    margin-bottom: 20px;
-    background-color: transparent; /* Adjust if you want a background color */
-    display: block; /* Ensures the img tag behaves as a block-level element */
+    margin-bottom: 20px; /* Spacing between icons */
+    cursor: pointer;
 }
 
 .bottom-section {
@@ -44,21 +43,26 @@ body, html {
 .user-info {
     display: flex;
     align-items: center;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #444; /* Separator */
+    margin-top: 10px; /* Spacing from the video container */
 }
 
 .profile-icon {
     width: 40px; /* Size of profile icon */
     height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+    border-radius: 50%; /* Make the image round */
+    margin-right: 10px; /* Spacing between the icon and the username */
 }
 
 .username {
     font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center; /* Align text and verified icon vertically */
+}
+
+.verified-icon {
+    width: 16px; /* Small size for the verified icon */
+    height: 16px; /* Maintain aspect ratio */
+    margin-left: 5px; /* Spacing between username and verified icon */
 }
 
 .follow-button {
@@ -67,28 +71,28 @@ body, html {
     border: none;
     border-radius: 4px;
     padding: 5px 15px;
-    margin-left: auto; /* Push the button to the right */
+    margin-left: auto; /* Push the button to the right side */
     cursor: pointer;
 }
 
 .video-description {
-    margin-top: 10px;
-    font-size: 0.9em;
+    margin-top: 5px; /* Spacing from the user info section */
+    font-size: 0.9em; /* Smaller font size for description */
 }
 
 .music-info {
     display: flex;
     align-items: center;
-    margin-top: 5px;
-    font-size: 0.8em;
+    margin-top: 5px; /* Spacing from the description */
+    font-size: 0.8em; /* Smaller font size for music info */
 }
 
 .music-note {
-    margin-right: 5px;
+    margin-right: 5px; /* Spacing from the music note to the text */
 }
 
 .music-name {
-    overflow: hidden; /* In case the text is too long */
+    overflow: hidden; /* Prevent overflow of text */
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Add an ellipsis for overflowed text */
 }
