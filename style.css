@@ -1,42 +1,38 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
     background-color: #000; /* TikTok background color */
     font-family: Arial, sans-serif; /* Similar to TikTok's font */
     color: #fff; /* Text color */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .tiktok-wrapper {
-    max-width: 500px;
-    margin: 0 auto; /* Center in the viewport */
+    max-width: 500px; /* Similar to TikTok's video width */
+    margin: auto;
     position: relative;
     background-color: #000;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Distribute space around children */
 }
 
 .video-container video {
-    width: 100%; /* Full width of its parent */
-    max-height: 50vh; /* Maximum of half the viewport height */
+    width: 100%;
+    display: block; /* Remove any default margin or padding */
 }
 
 .right-sidebar {
     position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 10px; /* Spacing from the right edge */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Offset for vertical centering */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .icon {
-    width: 40px;
+    width: 40px; /* Size for icons */
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Spacing between icons */
     cursor: pointer;
 }
 
@@ -47,94 +43,111 @@ body, html {
 .user-info {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Spread out profile icon and follow button */
+    margin-top: 10px; /* Spacing from the video container */
 }
 
-.profile-icon, .verified-icon {
-    width: 40px;
+.profile-icon {
+    width: 40px; /* Size of profile icon */
     height: 40px;
+    border-radius: 50%; /* Make the image round */
+    margin-right: 10px; /* Spacing between the icon and the username */
 }
 
 .username {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allow username to fill available space */
-    margin: 0 10px; /* Space on both sides */
+    font-weight: bold; /* Making the username bold */
+    display: inline-flex;
+    align-items: center; /* Align text and verified icon vertically */
+}
+
+.verified-icon {
+    width: 16px; /* Small size for the verified icon */
+    height: 16px; /* Maintain aspect ratio */
+    margin-left: 5px; /* Spacing between username and verified icon */
 }
 
 .follow-button {
-    padding: 5px 15px;
-    background-color: #fe2c55;
+    background-color: #fe2c55; /* TikTok's follow button color */
     color: #fff;
     border: none;
     border-radius: 4px;
+    padding: 5px 15px;
+    margin-left: auto; /* Push the button to the right side */
     cursor: pointer;
 }
 
-.video-description, .music-info {
-    font-size: 0.9em;
+.video-description {
+    margin-top: 5px; /* Spacing from the user info section */
+    font-size: 0.9em; /* Smaller font size for description */
 }
 
 .hashtag {
-    font-weight: bold;
+    font-weight: bold; /* Make hashtags bold */
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Spacing from the description */
+    font-size: 0.8em; /* Smaller font size for music info */
 }
 
 .music-note {
-    margin-right: 5px;
+    margin-right: 5px; /* Spacing from the music note to the text */
 }
 
 .music-name {
-    overflow: hidden;
+    overflow: hidden; /* Prevent overflow of text */
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Add an ellipsis for overflowed text */
 }
 
+/* Responsive styles for screens 600px wide or less */
 @media only screen and (max-width: 600px) {
     .tiktok-wrapper {
         max-width: 100%;
+        height: 100vh; /* Use 100% of the viewport height */
+        overflow: hidden; /* Hide overflow to avoid scrolling */
+    }
+
+    .video-container video {
+        max-height: 50vh; /* Limit video height to 50% of the viewport height */
+    }
+
+    .right-sidebar {
+        right: 5%; /* Give some more space on the right */
     }
 
     .icon {
-        width: 30px;
-        height: 30px;
+        width: 5vw; /* Use viewport width for scalable icons */
+        height: 5vw;
     }
 
-    .profile-icon, .verified-icon {
-        width: 30px;
-        height: 30px;
+    .user-info {
+        flex-direction: column; /* Stack profile info vertically */
+        align-items: flex-start; /* Align items to the start of the flex container */
+    }
+
+    .profile-icon {
+        width: 15vw; /* Larger icons for touch targets */
+        height: 15vw;
     }
 
     .username {
-        font-size: 4vw;
+        font-size: 4vw; /* Scalable font size based on viewport width */
+        margin-top: 5px; /* Space between icon and username */
     }
 
     .follow-button {
-        padding: 3vw;
-        font-size: 3.5vw;
+        padding: 3vw; /* Padding based on viewport width */
+        font-size: 3.5vw; /* Scalable font size for the button text */
     }
 
-    .video-description, .music-info {
-        font-size: 3.5vw;
+    .video-description p, .music-info {
+        font-size: 3.5vw; /* Scalable font size based on viewport width */
     }
 
-    .video-container video {
-        max-height: 55vh; /* Adjust height for mobile to ensure everything fits */
-    }
-}
-
-/* Additional media query for landscape orientation */
-@media only screen and (max-height: 500px) {
-    .video-container video {
-        max-height: 30vh; /* Further reduce height in landscape */
-    }
-
-    .icon, .profile-icon, .verified-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .username, .follow-button, .video-description, .music-info {
-        font-size: 3vw;
+    .verified-icon {
+        width: 4vw; /* Adjust size for the verified icon */
+        height: 4vw;
     }
 }
