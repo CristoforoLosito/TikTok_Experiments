@@ -10,7 +10,7 @@
     <div class="tiktok-wrapper">
         <!-- Video Container -->
         <div class="video-container">
-            <video src="325.mp4" controls></video>
+            <video src="HighMD_CentralTO.MOV" controls></video>
         </div>
 
         <!-- Right Sidebar for Icons -->
