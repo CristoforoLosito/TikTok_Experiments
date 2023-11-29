@@ -4,25 +4,22 @@ body, html {
     background-color: #000; /* TikTok background color */
     font-family: Arial, sans-serif; /* Similar to TikTok's font */
     color: #fff; /* Text color */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .tiktok-wrapper {
-    width: 100%; /* Use 100% of the iframe's width */
-    height: auto; /* Let the height grow as needed */
-    margin: auto;
+    max-width: 500px; /* Maximum content width */
+    margin: 0 auto; /* Center horizontally */
     position: relative;
     background-color: #000;
+    min-height: 100vh; /* Ensure at least the height of the viewport */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Distribute space around children */
-    overflow: hidden; /* Hide overflow to avoid scrolling */
+    flex-direction: column;
+    justify-content: space-between; /* Space out children */
 }
 
 .video-container video {
-    max-width: 100%; /* Full width of its parent */
-    max-height: 50vh; /* Maximum of half the viewport height */
-    display: block; /* Remove any default margin or padding */
+    max-width: 100%; /* Full width */
+    max-height: 50vh; /* Limit video height to 50% of the viewport height */
 }
 
 .right-sidebar {
@@ -39,32 +36,27 @@ body, html {
     width: 40px;
     height: 40px;
     margin-bottom: 20px;
-    cursor: pointer;
 }
 
 .bottom-section {
     padding: 10px;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box; /* Include padding in the width and height */
 }
 
 .user-info {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Spread out profile icon and follow button */
 }
 
 .profile-icon, .verified-icon {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Make the image round */
+    border-radius: 50%;
 }
 
 .username {
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allow username to fill available space */
-    margin: 0 10px; /* Space on both sides */
+    margin: 0 10px;
 }
 
 .follow-button {
@@ -94,51 +86,44 @@ body, html {
     text-overflow: ellipsis;
 }
 
+/* Responsive adjustments */
 @media only screen and (max-width: 600px) {
     .tiktok-wrapper {
-        max-height: 100vh; /* Adjust the height for mobile devices */
+        max-width: 100%; /* Full width on mobile */
+        min-height: 100vh; /* Ensure at least the height of the viewport */
     }
 
     .video-container video {
-        max-height: 50vh; /* Limit the video size to a reasonable portion of the screen */
+        max-height: 50vh; /* Adjust video height */
     }
 
     .icon {
-        width: 30px; /* Scale down the icons */
-        height: 30px;
+        width: 10vw; /* Relative size to viewport width */
+        height: 10vw;
     }
 
     .profile-icon, .verified-icon {
-        width: 30px; /* Scale down the profile and verified icons */
-        height: 30px;
+        width: 10vw;
+        height: 10vw;
     }
 
-    .username {
-        font-size: 4vw; /* Adjust font size based on viewport width */
-    }
-
-    .follow-button {
-        padding: 3vw; /* Adjust padding based on viewport width */
-        font-size: 3.5vw; /* Adjust font size based on viewport width */
-    }
-
-    .video-description, .music-info {
+    .username, .follow-button, .video-description, .music-info {
         font-size: 3.5vw; /* Adjust font size based on viewport width */
     }
 }
 
-/* Additional media query for landscape orientation */
+/* Landscape orientation */
 @media only screen and (max-height: 500px) {
     .video-container video {
-        max-height: 30vh; /* Further reduce height in landscape */
+        max-height: 30vh; /* Reduce video height further for landscape */
     }
 
     .icon, .profile-icon, .verified-icon {
-        width: 20px; /* Scale down for landscape orientation */
-        height: 20px;
+        width: 25px; /* Smaller icons for landscape */
+        height: 25px;
     }
 
     .username, .follow-button, .video-description, .music-info {
-        font-size: 3vw; /* Scale down text for landscape orientation */
+        font-size: 3vw; /* Smaller font sizes for landscape */
     }
 }
