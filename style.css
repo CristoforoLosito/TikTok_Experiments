@@ -78,16 +78,6 @@ body, html {
     margin-left: 5px; /* Spacing between username and verified icon */
 }
 
-.follow-button {
-    background-color: #fe2c55; /* TikTok's follow button color */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 15px;
-    margin-left: auto; /* Push the button to the right side */
-    cursor: pointer;
-}
-
 .video-description {
     margin-top: 5px; /* Spacing from the user info section */
     font-size: 0.9em; /* Smaller font size for description */
