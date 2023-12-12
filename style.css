@@ -86,20 +86,3 @@ body, html {
 .hashtag {
     font-weight: bold; /* Make hashtags bold */
 }
-
-.music-info {
-    display: flex;
-    align-items: center;
-    margin-top: 5px; /* Spacing from the description */
-    font-size: 0.8em; /* Smaller font size for music info */
-}
-
-.music-note {
-    margin-right: 5px; /* Spacing from the music note to the text */
-}
-
-.music-name {
-    overflow: hidden; /* Prevent overflow of text */
-    white-space: nowrap;
-    text-overflow: ellipsis; /* Add an ellipsis for overflowed text */
-}
