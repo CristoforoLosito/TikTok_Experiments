@@ -59,6 +59,13 @@ body, html {
     margin-top: 10px; /* Spacing from the video container */
 }
 
+profile-icon {
+    width: 10%; /* Size for icons */
+    aspect-ratio: 1 / 1;
+    margin-bottom: 30px; /* Spacing between icons */
+    cursor: pointer;
+}
+
 .username {
     font-weight: bold; /* Making the username bold */
     display: inline-flex;
