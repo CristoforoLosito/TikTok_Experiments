@@ -65,7 +65,6 @@ body, html {
     border-radius: 50%; /* Make the image round */
     margin-bottom: 30px; /* Spacing between icons */
     cursor: pointer;
-    opacity: 1;
 }
 
 .username {
