@@ -33,11 +33,22 @@ body, html {
     filter: drop-shadow(0px 4px 10px #000);
 }
 
-.profile-icon {
+.top-logo {
     width: 15%; /* Size for icons */
     aspect-ratio: 1 / 1;
     border-radius: 50%; /* Make the image round */
     margin-bottom: 30px; /* Spacing between icons */
+    cursor: pointer;
+}
+
+.bottom-logo {
+    width: 10%; /* Size for icons */
+    aspect-ratio: 1 / 1;
+    border: 2px solid grey;
+    border-radius: 50%; /* Make the image round */
+    margin-bottom: 30px; /* Spacing between icons */
+    padding: 5px;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
