@@ -59,9 +59,10 @@ body, html {
     margin-top: 10px; /* Spacing from the video container */
 }
 
-profile-icon {
+.profile-icon {
     width: 10%; /* Size for icons */
     aspect-ratio: 1 / 1;
+    border-radius: 50%; /* Make the image round */
     margin-bottom: 30px; /* Spacing between icons */
     cursor: pointer;
 }
