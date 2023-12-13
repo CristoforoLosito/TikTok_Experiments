@@ -35,6 +35,7 @@ body, html {
 
 .top-logo {
     width: 15%; /* Size for icons */
+    right-margin: -2%;
     aspect-ratio: 1 / 1;
     border-radius: 50%; /* Make the image round */
     margin-bottom: 30px; /* Spacing between icons */
